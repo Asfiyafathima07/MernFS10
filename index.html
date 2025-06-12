@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Exercises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h3 {
+      background-color: darkgreen;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .output {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      margin: 5px 0;
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      margin-top: 5px;
+    }
+    .links {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Task</h3>
+    <h4>Exercise-1</h4>
+    <p>Write a JavaScript function that reverses a number.</p>
+    <input type="number" id="numInput" placeholder="Enter number">
+    <button onclick="reverseNumber()">Reverse</button>
+    <div class="output" id="revResult"></div>
+    <h4>Exercise-2</h4>
+    <p>Write a JavaScript function that returns a passed string with letters in alphabetical order.</p>
+    <input type="text" id="strInput" placeholder="Enter string">
+    <button onclick="sortString()">Sort</button>
+    <div class="output" id="sortResult"></div>
+    <div class="links">
+      <h4>Related Files</h4>
+      <ul>
+        <li><a href="mutilanddiv.html" target="_blank">Multiplication and Division</a></li>
+        <li><a href="formvalid.html" target="_blank">Form Validation</a></li>
+        <li><a href="passwordgenerator.html" target="_blank">Password Generator</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    function reverseNumber() {
+      const num = document.getElementById('numInput').value;
+      const reversed = num.toString().split('').reverse().join('');
+      document.getElementById('revResult').innerText = "Expected Output : " + reversed;
+    }
+    function sortString() {
+      const str = document.getElementById('strInput').value;
+      const sorted = str.split('').sort().join('');
+      document.getElementById('sortResult').innerText = "Expected Output : " + sorted;
+    }
+  </script>
+</body>
+</html>
